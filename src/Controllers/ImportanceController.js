@@ -1,5 +1,4 @@
 const Importance = require('../Models/Importance')
-const importance = require('../Models/Importance')
 
 module.exports = ({
     async create(req, res) {
