@@ -18,9 +18,10 @@ module.exports = {
         }
     },
     async list(req, res) {
+        console.log('Entrou')
         try{
             const AllImportances = await Importance.find()
-            
+            console.log('Dentro')
             if(AllImportances.length === 0) {
                    return res.status(404).send("Do not find any importance");
                 }
