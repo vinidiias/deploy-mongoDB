@@ -1,6 +1,6 @@
 const Importance = require('../Models/Importance')
 
-module.exports = ({
+module.exports = {
     async create(req, res) {
         const { name, id } = req.body
 
@@ -26,4 +26,4 @@ module.exports = ({
             res.status(400).send(err)
         }
     }
-})
+}
