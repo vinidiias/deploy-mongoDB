@@ -19,4 +19,4 @@ app.use(cors());
 app.use(express.json());
 app.use('/api', router); // importante colocar prefixo pra evitar conflito com Vercel
 
-module.exports.handler = serverless(app);
+module.exports = serverless(app);
