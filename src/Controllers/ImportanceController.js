@@ -20,7 +20,10 @@ module.exports = {
     async list(req, res) {
         try{
             const AllImportances = await Importance.find()
-
+            
+            if(AllImportances.length === 0) {
+                   return res.status(404).send("Do not find any importance");
+                }
             return res.status(200).send(AllImportances)
         }catch(err){
             res.status(400).send(err)
